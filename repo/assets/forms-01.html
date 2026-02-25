@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forms</title>
+    <link rel="shortcut icon" href="assets/img/download.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/site.css">
+    <script src="assets/java/side.js"></script>
+    <style>
+        form{
+            padding: 0.2rem 0.5rem 0.5rem 0.5rem;
+        
+        }
+        form fieldset :: fieldset input{
+
+display: flex;
+flex-direction: column;
+        }
+        
+            
+        
+
+  
+
+        
+  
+           
+       
+
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1>forms</h1>
+        <h3></h3>
+    </header>
+     <form action="thanks.html">
+            <fieldset>
+                <legend><h3>Legend</h3></legend>
+                <label for="txtName">Fulde Navn</label>
+                <input type="text" name="txtName" id="txtName" placeholder="skive her" required>
+                <label for="txtNumber">Tlf-Nummer</label>
+                <input type="tel" id="txtNumber" placeholder="skive her" required>
+                <label for="txtEmail">Din Email</label>
+                <input type="email" id="txtEmail" placeholder="skive her" required>
+                <textarea name="txtarea" rows="8" id="txtarea" placeholder="skive noget her" ></textarea>
+                <input type="reset" value="Annuller">
+                <input type="submit" value="Send">
+            </fieldset>
+
+
+        </form>
+</body>
+</html>
