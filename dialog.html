@@ -2,20 +2,77 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./repo/assets/css/site.css">
 </head>
 <style>
-    img{
-    
+    body{
+        font-family:sans-serif;
+        background-color: #e1e1e1;
+        color: #434343;
     }
+    img{
+        display: block;
+        width: 100%;
+    }
+    #mydialog{
+        border: 0;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        bottom: 0;
+        margin: 0;
+        padding: 0;
+        background-color: #ffffffaf;
+    }
+    #mydialog a{
+        position: absolute;
+        display: flex;
+        place-content: center;
+        place-items: center;
+        font-size: 1.2rem;
+        text-align: center;
+        background-color: red;
+        width: 2rem;
+        height: 2rem;
+        line-height: 2rem;
+        border-radius: 50%;
+        top: -1rem;
+        right: -1rem;
+        text-decoration: none;
+        color: #fff;
+    }
+    #mydialog form fieldset + a{
+        opacity: 0.7;
+        transition: 356ms ease-in-out;
+    }
+    #mydialog form fieldset + a:hover{
+        opacity: 1;
+    }
+ 
+
 </style>
 <body>
     <dialog id="mydialog">
-        is a monkey 
-        <a href="#" onclick="window.mydialog.close();">close dialog</a>
+        <form action="thanks.html">
+        <fieldset>
+      <legend><h3>from challenge</h3></legend>
+                <label for="txtName">Fulde Navn</label>
+                <input type="text" name="txtName" id="txtName" placeholder="skive her" required>
+                <label for="txtNumber">Tlf-Nummer</label>
+                <input type="tel" id="txtNumber" placeholder="skive her" required>
+                <label for="txtEmail">Din Email</label>
+                <input type="email" id="txtEmail" placeholder="skive her" required>
+                <textarea name="txtarea" rows="8" id="txtarea" placeholder="skive noget her" ></textarea>
+                <input type="reset" value="Annuller">
+                <input type="submit" value="Send">
+       <a href="#" onclick="window.mydialog.close();">close dialog</a>
+       </fieldset>
+    </form>
     </dialog>
     <a href="javascript:void();" onclick="window.mydialog.show();">open dialog</a>
-    <img src="repo/assets/img/download.jpg" alt="monkey">
+    
 </body>
 </html>
